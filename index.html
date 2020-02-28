@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html><head>
+<title>Simplode</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+<link rel="icon" href="https://simplode.co/Simplode3.png" type="image/gif" sizes="16x16">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body style="background-color:#efeded;">
+  <!--
+    Special thanks to...
+      • Elvio Sadun
+      • Peter Griggs
+      • Rolando Lopez
+      • Juli Troy
+      • Mason Hartman
+    Simplode code was created by...
+      • Julian Dans
+      • Denis Levine
+  -->
+<div id="select">
+<select id="dropdown" onchange="changeBC()">
+  <option value="">Background Color</option>
+  <option value="#efeded;">Default</option>
+  <option value="white">White</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="purple">Purple</option> 
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+  <option value="grey">Grey</option>
+  <option value="black">Black</option>
+</select>
+<select id="txtcolordropdown" onchange="changeTxtColor()">
+  <option value="">Text Color</option>
+  <option value="black">Default</option>
+  <option value="black">Black</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="purple">Purple</option>
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+  <option value="grey">Grey</option>
+  <option value="white">White</option>
+</select>
+<select id="txtfontdropdown" onchange="changeTxtFont()">
+  <option value="">Font</option>
+  <option value="sans-serif">Sans-Serif</option>
+  <option value="serif">Serif</option>
+  <option value="courier">Courier New</option>
+  <option value="times">Times New Roman</option>
+  <option value="arial">Arial</option>
+</select>
+<select id="newelementdropdown">
+  <option value="">New Element</option>
+  <option value="h1">Heading One</option>
+  <option value="h2">Heading Two</option>
+  <option value="h3">Heading Three</option>
+  <option value="p">Paragraph</option>
+  <option value="a">Link</option>
+  <option value="img">Image</option>
+</select>
+<button onclick="add()">Add Element</button>
+<button onclick="download()">Get HTML</button>
+<br>
+<input type="text" id="hrefInput" style="margin:5px;display:none;" placeholder="Link for the href" onkeypress="setHref(event)">
+
+<input type="text" id="srcInput" style="margin:5px;display:none;" placeholder="Image link" onkeypress="setSrc(event)">
+</div>
+  <div id="yourStuff" style="background-color:#efeded;">
+<div><h1 class="drag ui-draggable ui-draggable-handle" contenteditable="true" ondblclick="document.execCommand('selectAll',false,null)" style="position: relative;">YOUR TITLE: Click to edit; drag to position.</h1></div>
+<h3><i class="drag ui-draggable ui-draggable-handle" contenteditable="true" ondblclick="document.execCommand('selectAll',false,null)" style="position: relative;">YOUR SLOGAN: Change the font or color in the right sidebar.</i></h3>
+<p class="drag ui-draggable ui-draggable-handle" contenteditable="true" ondblclick="document.execCommand('selectAll',false,null)" style="position: relative;">BODY TEXT: Grab an image from the web, and enter the image address in the input bar below. You can drag that too!</p>
+
+    <!--  This website was made with Simplode 2020.
+Simplode was created by Julian Dans and Denis Levine.
+ © Simplode 2020
+    --> 
+    <div id="insertBeforeDiv"></div>
+  </div>
+  <div id="getHTML"></div>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBdBIfOWQrgiroIzjbjaUHN1_l2E3KfjGE",
+    authDomain: "simplode-code.firebaseapp.com",
+    databaseURL: "https://simplode-code.firebaseio.com",
+    projectId: "simplode-code",
+    storageBucket: "simplode-code.appspot.com",
+    messagingSenderId: "915185200224"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-database.js"></script>
+  
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="simplode.js"></script>
+
+
+</body></html>

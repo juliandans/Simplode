@@ -1,0 +1,52 @@
+h1{
+  padding-top:10px;
+  margin: 0px;
+}
+#select {
+  position:absolute;
+  margin-left:89%;
+/*   overflow:hidden; */
+  top:10px;
+  display: flex;
+  flex-direction: column;
+  background-color:lightblue;
+  height:97%;
+}
+
+#select select {
+  background-color:lightgray;
+}
+
+button {
+  margin-top:15px;
+  margin-left:10px;
+  margin-right:10px;
+  background-color:lightgray;
+  width:85%;
+  border-radius:5px;
+  border-color:#A9A9A9;
+  text-align:left;
+}
+
+#yourStuff {
+  position:absolute;
+}
+select {
+  margin-top:15px;
+  margin-right:10px;
+  margin-left:10px;
+}
+
+textarea {
+  margin-top:50%;
+}
+
+body {
+  overflow:hidden;
+  width:100%;
+  height:100vh;
+}
+
+#plus {
+    border-radius:4.5px;
+}
