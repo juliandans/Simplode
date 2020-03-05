@@ -14,10 +14,12 @@
       • Rolando Lopez
       • Juli Troy
       • Mason Hartman
+
     Simplode code was created by...
       • Julian Dans
       • Denis Levine
   -->
+  <div id="acc">
 <div id="select">
 <select id="dropdown" onchange="changeBC()">
   <option value="">Background Color</option>
@@ -45,11 +47,15 @@
 </select>
 <select id="txtfontdropdown" onchange="changeTxtFont()">
   <option value="">Font</option>
-  <option value="sans-serif">Sans-Serif</option>
-  <option value="serif">Serif</option>
   <option value="courier">Courier New</option>
   <option value="times">Times New Roman</option>
   <option value="arial">Arial</option>
+  <!--<option value="comic sans ms">Comic Sans :(</option>-->
+  <option value="verdana">Verdana</option>
+  <option value="georgia">Georgia</option>
+  <option value="palatino">Palatino</option>
+  <option value="garamond">Garamond</option>
+  <option value="impact">Impact</option>
 </select>
 <select id="newelementdropdown">
   <option value="">New Element</option>
@@ -62,10 +68,16 @@
 </select>
 <button onclick="add()">Add Element</button>
 <button onclick="download()">Get HTML</button>
+<!--<button onclick="hide()">Hide</button>-->
 <br>
-<input type="text" id="hrefInput" style="margin:5px;display:none;" placeholder="Link for the href" onkeypress="setHref(event)">
+<input type="text" id="hrefInput" style="margin:5px;display:none;" placeholder="Link for the href" onkeypress="setHref(event)" title="Change the address of the link">
 
-<input type="text" id="srcInput" style="margin:5px;display:none;" placeholder="Image link" onkeypress="setSrc(event)">
+<input type="url" id="srcInput" style="margin:5px;display:none;" placeholder="Image link..." onkeypress="setSrc(event)" title="Change the source of the image">
+<input type="number" id="imgWidth" style="margin:5px;display:none;" placeholder="Image width..." onkeypress="setSrc(event)" title="Set image width (in pixels)">
+<input type="number" id="imgHeight" style="margin:5px;display:none;" placeholder="Image height..." onkeypress="setSrc(event)" title="Set image height (in pixels)">
+<br>
+<div id="getHTML"></div>
+</div>
 </div>
   <div id="yourStuff" style="background-color:#efeded;">
 <div><h1 class="drag ui-draggable ui-draggable-handle" contenteditable="true" ondblclick="document.execCommand('selectAll',false,null)" style="position: relative;">YOUR TITLE: Click to edit; drag to position.</h1></div>
@@ -78,7 +90,6 @@ Simplode was created by Julian Dans and Denis Levine.
     --> 
     <div id="insertBeforeDiv"></div>
   </div>
-  <div id="getHTML"></div>
 <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
 <script>
